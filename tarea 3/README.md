@@ -51,15 +51,15 @@ sudo bash openvpn-install.sh
 ```
 - Configuración de ***IP***.
 
-![ConfiguracionVPN](tarea 3/images/config1.jpg "Configuración IP")
+![ConfiguracionVPN](/tarea%203/images/config1.jpg "Configuración IP")
 
 - Configuración de puerto y protocolo.
 
-![ConfiguracionVPN](/images/config2.jpg "Configuración Puerto y Protocolo")
+![ConfiguracionVPN](/tarea%203/images/config2.jpg "Configuración Puerto y Protocolo")
 
 - Configuración de ***DNS***.
 
-![ConfiguracionVPN](/images/config3.jpg "Configuración DNS")
+![ConfiguracionVPN](/tarea%203/images/config3.jpg "Configuración DNS")
 
 - Generación de archivos ***.ovpn*** para conexión con clientes.
 
@@ -76,26 +76,26 @@ Conexión de cada uno de los miembros del equipo con el resto de integrantes.
 ```sh
 IP: 10.8.0.6
 ```
-![InstalacionOpenVPN](/images/Jose.png "Descarga openVPN")
+![InstalacionOpenVPN](/tarea%203/images/Jose.png "Descarga openVPN")
 
 ### Cliente 2
 ```sh
 IP: 10.8.0.5
 ```
-![InstalacionOpenVPN](/images/eric.png "Descarga openVPN")
+![InstalacionOpenVPN](/tarea%203/images/Eric.png "Descarga openVPN")
 
 ### Cliente 3
 ```sh
 IP: 10.8.0.4
 ```
 
-![InstalacionOpenVPN](/images/luis.png "Descarga openVPN")
+![InstalacionOpenVPN](/tarea%203/images/luis.png "Descarga openVPN")
 
 ### Cliente 4
 ```sh
 IP: 10.8.0.3
 ```
-![InstalacionOpenVPN](/images/iova.png "Descarga openVPN")
+![InstalacionOpenVPN](/tarea%203/images/iova.png "Descarga openVPN")
 <div id='id3'/>
 
 ## 3. Configuración de _openVPN_  [ ⇧](#content)
@@ -106,36 +106,36 @@ IP: 10.8.0.3
 https://openvpn.net/vpn-client/
 ```
 
-![InstalacionOpenVPN](/images/open1.png "Descarga openVPN")
+![InstalacionOpenVPN](/tarea%203/images/open1.png "Descarga openVPN")
 
-![InstalacionOpenVPN](/images/open2.png "Archivo openVPN")
+![InstalacionOpenVPN](/tarea%203/images/open2.png "Archivo openVPN")
 
 - Ejecución del asistente de instalación
 
-![InstalacionOpenVPN](/images/open3.png "Asistente")
+![InstalacionOpenVPN](/tarea%203/images/open3.png "Asistente")
 
-![InstalacionOpenVPN](/images/open4.png "Asistente")
+![InstalacionOpenVPN](/tarea%203/images/open4.png "Asistente")
 
-![InstalacionOpenVPN](/images/open5.png "Asistente")
+![InstalacionOpenVPN](/tarea%203/images/open5.png "Asistente")
 
-![InstalacionOpenVPN](/images/open6.png "Asistente")
+![InstalacionOpenVPN](/tarea%203/images/open6.png "Asistente")
 
-![InstalacionOpenVPN](/images/open7.png "Asistente")
+![InstalacionOpenVPN](/tarea%203/images/open7.png "Asistente")
 
 
 - Ejecución del software instalado
 
-![InstalacionOpenVPN](/images/open8.png "Ejecución")
+![InstalacionOpenVPN](/tarea%203/images/open8.png "Ejecución")
 
 - Conexión a servidor por medio de archivo generado
 
-![InstalacionOpenVPN](/images/open9.png "Conexión")
+![InstalacionOpenVPN](/tarea%203/images/open9.png "Conexión")
 
-![InstalacionOpenVPN](/images/open11.png "Conexión")
+![InstalacionOpenVPN](/tarea%203/images/open11.png "Conexión")
 
-![InstalacionOpenVPN](/images/open10.png "Conexión")
+![InstalacionOpenVPN](/tarea%203/images/open10.png "Conexión")
 
-![InstalacionOpenVPN](/images/open12.png "Conexión")
+![InstalacionOpenVPN](/tarea%203/images/open12.png "Conexión")
 
 > \* ***Nota:*** El firewall debe estar desactivado para poder llevar a cabo la comunicación.
 > 
@@ -146,7 +146,7 @@ https://openvpn.net/vpn-client/
 ## 4. Grupo IAM [ ⇧](#content)
 Grupo de ***IAM*** con todos los miembros del grupo.
 
-![GrupoIAM](/images/iam.jpg "Grupo IAM")
+![GrupoIAM](/tarea%203/images/iam.jpg "Grupo IAM")
 
 <div id='id5'/>
 
@@ -154,13 +154,13 @@ Grupo de ***IAM*** con todos los miembros del grupo.
 
 Creación de instancia de máquina virtual en ***Google Cloud Platform***
 
-![Virtual](/images/mv1.png "Maquina Virtual")
+![Virtual](/tarea%203/images/mv1.png "Maquina Virtual")
 
-![Virtual](/images/mv2.png "Maquina Virtual")
+![Virtual](/tarea%203/images/mv2.png "Maquina Virtual")
 
-![Virtual](/images/mv3.png "Maquina Virtual")
+![Virtual](/tarea%203/images/mv3.png "Maquina Virtual")
 
-![Virtual](/images/instanciaVM.jpg "Maquina Virtual")
+![Virtual](/tarea%203/images/instanciaVM.jpg "Maquina Virtual")
 
 Resumen de características:
 |Característica|Valor|
