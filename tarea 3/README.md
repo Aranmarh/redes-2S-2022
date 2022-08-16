@@ -51,7 +51,11 @@ sudo bash openvpn-install.sh
 ```
 - Configuración de ***IP***.
 
+<<<<<<< HEAD
 ![ConfiguracionVPN](/tarea%203/images/config1.jpg "Configuración IP")
+=======
+![ConfiguracionVPN](tarea%203/images/config1.jpg "Configuración IP")
+>>>>>>> main
 
 - Configuración de puerto y protocolo.
 
