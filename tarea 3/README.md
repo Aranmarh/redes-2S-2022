@@ -175,6 +175,6 @@ Resumen de características:
 > Adicionalmente se crearon dos reglas de ***firewall***, una de entrada y una de salida como se observa a continuación.
 > 
 > **Regla de entrada:**
-> ![FirewallRules](/images/firewallvmin.png "Regla de Firewall - Entrada")
+> ![FirewallRules](/tarea%203/images/firewallvmin.png "Regla de Firewall - Entrada")
 > **Regla de salida:**
-> ![FirewallRules](/images/firewallvmout.png "Regla de Firewall - Salida")
+> ![FirewallRules](/tarea%203/images/firewallvmout.png "Regla de Firewall - Salida")
