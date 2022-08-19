@@ -44,30 +44,30 @@ Configuración de las  ***VPC*** en instancia de máquina virtual.
 ![ConfiguracionVPN](/practica1/recursos/vpc_1.png "Seleccionar VPC")
 
 ### cuando se cra una VPC se muestra el siguiente icono
-![ConfiguracionVPN](/recursos/vpc_2.png "Instancia de VPC")
+![ConfiguracionVPN]((/practica1/recursos/vpc_2.png "Instancia de VPC")
 
 ### luego de que la VPC este creada dar click derecho sobre la VPCS creada y presionar “Start”, esto iniciara la máquina 		virtual
-![ConfiguracionVPN](/recursos/vpc_3.png "inicio de una VPC")
+![ConfiguracionVPN]((/practica1/recursos/vpc_3.png "inicio de una VPC")
 
 ### luego de iniciar la máquina virtual, tendremos que asignar una ip valida, para ellos 		ejecutamos la consola, dando click derecho sobre la VPCS y seleccionando Console
-![ConfiguracionVPN](/recursos/vpc_4.png "inicio de una VPC")
+![ConfiguracionVPN]((/practica1/recursos/vpc_4.png "inicio de una VPC")
 
 Ingresamos la configuracion de ip que necesitamos.
 ```
 •	Ip:
 	    192.168.11.10
 •	Mascara de Sub Red:
-    	255.255.255.0
+    		255.255.255.0
 •	Getawey:
-    	192.168.11.1
+    		192.168.11.1
 •	Comando completo, a ingresar
-    	ip 192.168.11.10 255.255.255.0 192.168.11.1
+    		ip 192.168.11.10 255.255.255.0 192.168.11.1
 
 ```
-![ConfiguracionVPN](/recursos/vpc_5.png "configuracion VPC")
+![ConfiguracionVPN]((/practica1/recursos/vpc_5.png "configuracion VPC")
 
 Al presionar enter, retorna el siguiente mensaje, el cual indica que la ip ha sido asignada correctamente
-![ConfiguracionVPN](/recursos/vpc_6.png "configuracion VPC")
+![ConfiguracionVPN](/practica1/recursos/vpc_6.png "configuracion VPC")
 
 <div id='id2'/>
 
@@ -77,7 +77,7 @@ Al presionar enter, retorna el siguiente mensaje, el cual indica que la ip ha si
 Luego de estar configuradas las ***VPC*** se configuran las nubes a ;as cual se van a ingresar 
 
 ### Para poder crear una nube,  se selecciona en el mennu un cloud 
-![ConfiguracionVPN](/recursos/vpc_1.png "Seleccionar VPC")
+![ConfiguracionVPN](/practica1/recursos/vpc_1.png "Seleccionar VPC")
 
 
 ![InstalacionOpenVPN](/images/open1.png "Descarga openVPN")
@@ -122,26 +122,26 @@ luego que esten configuradas las nubes con sus respectivos puertos se procede a 
 ```sh
 IP: 10.8.0.20
 ```
-![ConfiguracionVPN](/recursos/Jose_pin.jpeg "configuracion VPC")
+![ConfiguracionVPN](/practica1/recursos/Jose_pin.jpeg "configuracion VPC")
 
 ### Cliente 2
 ```sh
 IP: 10.8.0.20
 ```
-![ConfiguracionVPN](/recursos/luis_pin.jpeg "configuracion VPC")
+![ConfiguracionVPN](/practica1/recursos/luis_pin.jpeg "configuracion VPC")
 
 ### Cliente 3
 ```sh
 IP: 10.8.0.30
 ```
 
-![ConfiguracionVPN](/recursos/eric_pin.jpeg "configuracion VPC")
+![ConfiguracionVPN](/practica1/recursos/eric_pin.jpeg "configuracion VPC")
 
 ### Cliente 4
 ```sh
 IP: 10.8.0.40
 ```
-![ConfiguracionVPN](/recursos/iovana_ping.jpeg "configuracion VPC")
+![ConfiguracionVPN](/practica1/recursos/iovana_ping.jpeg "configuracion VPC")
 
 
 
