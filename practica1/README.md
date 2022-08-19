@@ -46,6 +46,8 @@ Configuración de las  ***VPC*** en instancia de máquina virtual.
 ### cuando se cra una VPC se muestra el siguiente icono
 ![ConfiguracionVPN](/practica1/recursos/vpc_2.png "Instancia de VPC")
 
+luego se conecta la vpc al switch a la red local.
+
 ### luego de que la VPC este creada dar click derecho sobre la VPCS creada y presionar “Start”, esto iniciara la máquina 		virtual
 ![ConfiguracionVPN](/practica1/recursos/vpc_3.png "inicio de una VPC")
 
