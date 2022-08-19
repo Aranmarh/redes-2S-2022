@@ -44,13 +44,13 @@ Configuración de las  ***VPC*** en instancia de máquina virtual.
 ![ConfiguracionVPN](/practica1/recursos/vpc_1.png "Seleccionar VPC")
 
 ### cuando se cra una VPC se muestra el siguiente icono
-![ConfiguracionVPN]((/practica1/recursos/vpc_2.png "Instancia de VPC")
+![ConfiguracionVPN](/practica1/recursos/vpc_2.png "Instancia de VPC")
 
 ### luego de que la VPC este creada dar click derecho sobre la VPCS creada y presionar “Start”, esto iniciara la máquina 		virtual
-![ConfiguracionVPN]((/practica1/recursos/vpc_3.png "inicio de una VPC")
+![ConfiguracionVPN](/practica1/recursos/vpc_3.png "inicio de una VPC")
 
 ### luego de iniciar la máquina virtual, tendremos que asignar una ip valida, para ellos 		ejecutamos la consola, dando click derecho sobre la VPCS y seleccionando Console
-![ConfiguracionVPN]((/practica1/recursos/vpc_4.png "inicio de una VPC")
+![ConfiguracionVPN](/practica1/recursos/vpc_4.png "inicio de una VPC")
 
 Ingresamos la configuracion de ip que necesitamos.
 ```
@@ -64,7 +64,7 @@ Ingresamos la configuracion de ip que necesitamos.
     		ip 192.168.11.10 255.255.255.0 192.168.11.1
 
 ```
-![ConfiguracionVPN]((/practica1/recursos/vpc_5.png "configuracion VPC")
+![ConfiguracionVPN](/practica1/recursos/vpc_5.png "configuracion VPC")
 
 Al presionar enter, retorna el siguiente mensaje, el cual indica que la ip ha sido asignada correctamente
 ![ConfiguracionVPN](/practica1/recursos/vpc_6.png "configuracion VPC")
