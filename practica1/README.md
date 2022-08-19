@@ -79,41 +79,14 @@ Al presionar enter, retorna el siguiente mensaje, el cual indica que la ip ha si
 Luego de estar configuradas las ***VPC*** se configuran las nubes a ;as cual se van a ingresar 
 
 ### Para poder crear una nube,  se selecciona en el mennu un cloud 
-![ConfiguracionVPN](/practica1/recursos/vpc_1.png "Seleccionar VPC")
+![ConfiguracionVPN](/practica1/recursos/vpc_1.png "Seleccionar Cloud")
 
+### Se selecciona la congfigurscion en la nube, parfa poder aplicar la configuracion
+![ConfiguracionVPN](/practica1/recursos/cloud_1.png "configuracion Cloud")
 
-![InstalacionOpenVPN](/images/open1.png "Descarga openVPN")
+se selecciona UDP tunnels y se asigna el numero del puerto que esta a la escucha con ***local port*** y en ***remote port*** se asigna el numero de puerto al que se va a hacer la coneccion
 
-![InstalacionOpenVPN](/images/open2.png "Archivo openVPN")
-
-- Ejecución del asistente de instalación
-
-![InstalacionOpenVPN](/images/open3.png "Asistente")
-
-![InstalacionOpenVPN](/images/open4.png "Asistente")
-
-![InstalacionOpenVPN](/images/open5.png "Asistente")
-
-![InstalacionOpenVPN](/images/open6.png "Asistente")
-
-![InstalacionOpenVPN](/images/open7.png "Asistente")
-
-
-- Ejecución del software instalado
-
-![InstalacionOpenVPN](/images/open8.png "Ejecución")
-
-- Conexión a servidor por medio de archivo generado
-
-![InstalacionOpenVPN](/images/open9.png "Conexión")
-
-![InstalacionOpenVPN](/images/open11.png "Conexión")
-
-![InstalacionOpenVPN](/images/open10.png "Conexión")
-
-![InstalacionOpenVPN](/images/open12.png "Conexión")
-
-> \* ***Nota:*** El VPC y el VPN deben estar encendidos para la comunicación.
+![ConfiguracionVPN](/practica1/recursos/cloud_2.png "configuracion Cloud")
 
 
 <div id='id3'/>
