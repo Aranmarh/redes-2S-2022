@@ -41,7 +41,7 @@ Integrantes:
 Configuración de las  ***VPC*** en instancia de máquina virtual.
 
 ### Para poder crear un Máquina virtual,  se selecciona en el mennu un VPCS
-![ConfiguracionVPN](/recursos/vpc_1.png "Seleccionar VPC")
+![ConfiguracionVPN](practica1/recursos/vpc_1.png "Seleccionar VPC")
 
 ### cuando se cra una VPC se muestra el siguiente icono
 ![ConfiguracionVPN](/recursos/vpc_2.png "Instancia de VPC")
