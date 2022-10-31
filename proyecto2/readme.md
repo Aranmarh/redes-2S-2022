@@ -186,7 +186,7 @@ Para esta topologia ise utilizo la red 192.168.51.0/24 la cual se administro en 
   - Se crearon las VLANs correspondientes para realizar la configuración de los puertos, asignando el modo y VLAN correspondientes.
   - Se configuraron las rutas estáticas necesarias en R1 para que sea posible establecer comunicación entre el centro de datos y la oficina central
 ```sh
-Imagen descriptiva de la Topologia 2
+Imagen descriptiva de la Topologia 3
 ```
 <p align="center">
   <img src="recursos/topologias/topologia_3.png" alt="drawing">
@@ -194,7 +194,7 @@ Imagen descriptiva de la Topologia 2
 
 ```sh
 Para esta red se realizo el calculo que se describe a continuacion: 
-192.168.25.0/24
+192.168.51.0/24
 ```
 <p align="left">
   <img src="recursos/topologias/tabla_3.png" alt="drawing" >
