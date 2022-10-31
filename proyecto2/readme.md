@@ -4,7 +4,7 @@
 >
 >Facultad de Ingeniería 
 >Escuela de Ciencias y Sistemas 
->Primer Semestre, 2022
+>Segundo Semestre, 2022
 >
 >Laboratorio de Redes de Computadoras 1
 
@@ -37,6 +37,7 @@ Integrantes:
 3. [TOPOLOGIA 1](#id3)
 4. [TOPOLOGIA 2](#id4)
 5. [TOPOLOGIA 3](#id5)
+6. [CONFIGURACIONES](#id6)
 
 <div id='id1'/>
 
@@ -113,51 +114,7 @@ Para esta red se realizo el calculo FLSM que se describe en la siguiente tabla:
   <img src="recursos/topologias/tabla_1.png" alt="drawing" width="620" height="400">
 </p>
 
-```bat
-CONFIGURACIONES ESW1
-#ESW1
-    #CONFIGURACIÓN VTP
-    conf t
-    vtp domain redes1gp1
-    vtp password redes1gp1
-    vtp mode server
-    vtp version 2
-    #comprobar la configuración
-        sh vtp st
 
-  # configuración de VLAN
-	conf t
-	vlan 10
-	name RHUMANOS
-	vlan 20 
-	name CONTABILIDAD
-	vlan 30
-	name VENTAS
-	vlan 40
-	name INFORMATICA
-```
-
-```bat
-#CONFIGURACION DE ESW1 F1/10 EN MODO TRUNK
-    conf t
-    int f1/0
-    switchport mode trunk
-    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
-    sh int tr
-```
-
-```sh
-  # configuración de port channel en cada bloque de conexiones.
-# consejos:
-	# repetir la configuración, para cada bloque de port channel
-	#en simultáneo para evitar que falle
-	# Solo falta cambiar para cada configuración la interfaz(f1/ 3 - 4) correspondiente
-# Para “channel-group # mode on”, el número indica el número del texto en rojo
-
- ```
-<p align="left">
-  <img src="recursos/topologias/config_portChanel.png" alt="drawing" width="320" height="200">
-</p>
 
 <div id='id4'/>
 
@@ -218,101 +175,370 @@ Para esta red se realizo el calculo VLSM que se describe en la siguiente tabla:
 
 `
 
-<div id='id5'/>
-
-##  TOPOLOGIA3 [ ⇧](#content)
-
-
-### Centro de Datos
-Para esta topologia ise utilizo la red 192.168.51.0/24 la cual se administro en subredes para los departamentos que se mensionaron anteriormente.
-
-
- 
-  - Se crearon las VLANs correspondientes para realizar la configuración de los puertos, asignando el modo y VLAN correspondientes.
-  - Se configuraron las rutas estáticas necesarias en R1 para que sea posible establecer comunicación entre el centro de datos y la oficina central
-
-
-
-
-```sh
-Imagen descriptiva de la Topologia 3
-```
-<p align="center">
-  <img src="recursos/topologias/topologia_3.png" alt="drawing">
-</p>
-
-
-```sh
-Para esta red se realizo el calculo que se describe a continuacion: 
-192.168.51.0/24
-```
-<p align="left">
-  <img src="recursos/topologias/tabla_2.png" alt="drawing" >
-</p>
-
-
 <div id='id6'/>
 
-##  TOPOLOGIA3 [ ⇧](#content)
+##  CONFIGURACIONES [ ⇧](#content)
 
+
+```bat
+CONFIGURACIONES ESW1
+REM ESW1
+    REM CONFIGURACIÓN VTP
+    conf t
+    vtp domain redes1gp1
+    vtp password redes1gp1
+    vtp mode server
+    vtp version 2
+    #comprobar la configuración
+        sh vtp st
+
+  REM configuración de VLAN
+	conf t
+	vlan 10
+	name RHUMANOS
+	vlan 20 
+	name CONTABILIDAD
+	vlan 30
+	name VENTAS
+	vlan 40
+	name INFORMATICA
+```
+
+```bat
+REM CONFIGURACION DE ESW1 F1/10 EN MODO TRUNK
+    conf t
+    int f1/0
+    switchport mode trunk
+    switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+    sh int tr
+```
 
 ```sh
-ACCESS
-```
-<p align="left">
-  <img src="/Proyecto2/imagenes/topologia3/access.png" alt="drawing">
+  # configuración de port channel en cada bloque de conexiones.
+# consejos:
+	# repetir la configuración, para cada bloque de port channel
+	#en simultáneo para evitar que falle
+	# Solo falta cambiar para cada configuración la interfaz(f1/ 3 - 4) correspondiente
+# Para “channel-group # mode on”, el número indica el número del texto en rojo
+
+ ```
+<p align="center">
+  <img src="recursos/topologias/config_portChanel.png" alt="drawing" width="320" height="200">
 </p>
 
+```bat
+REM ESW1
+    REM configuración de port channel 
+        conf t
+        interface range fastEthernet 1/3 - 4
+        channel-group 2 mode on
 
-```sh
-VLANs
+REM  ESW3
+    REM configuración de port channel ESW3
+        conf t
+        interface range fastEthernet 1/3 - 4
+        channel-group 2 mode on
+
+
 ```
+
+```bat
+REM  ESW1
+    REM configuración acceso a vlan mode trunk y port channel
+        conf t
+        interface port-channel 2
+        switchport mode trunk
+        switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+REM ESW3
+    REM configuración acceso a vlan mode trunk y port channel
+        conf t
+        interface port-channel 2
+        switchport mode trunk
+        switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+
+
+```
+
+
+```bat
+REM  configuración modo acceso para ESW5, ESW6 y ESW7
+
+    REM ESW5
+	conf t
+	int f1/2
+	switchport mode access
+	switchport access vlan 20
+	exit
+	int f1/1
+	switchport mode access
+	switchport access vlan 40
+
+	REM ESW6
+	conf t
+	int f1/2
+	switchport mode access
+	switchport access vlan 30
+	exit
+	int f1/1
+	switchport mode access
+	switchport access vlan 40
+
+	REM ESW7
+	conf t
+	int f1/11
+	switchport mode access
+	switchport access vlan 30
+	exit
+	int f1/12
+	switchport mode access
+	switchport access vlan 10
+
+```
+
+```bat
+REM configuración para VPCS
+	REM asignar la ip correspondiente
+    ip 192.168.10.10 255.255.255.0 192.168.10.1
+    save
+    sh ip
+```
+
+configuración de puertos en slot1 : “NM-1FE-TX” en R5
 <p align="left">
-  <img src="/Proyecto2/imagenes/topologia3/vlan.png" alt="drawing">
+  <img src="recursos/topologias/R5.png" alt="drawing" >
 </p>
 
+```bat
+REM configuración de las inter-Vlan en R5
+	conf t
+    int f1/0
+    no shutdown
+    int f 1/0.10
+    int f 1/0.20
+    int f 1/0.30
+    int f 1/0.40
+    do sh run
 
-```sh
-INTERVLANs
+    REM VLAN 10 = RHUMANOS
+    int f1/0.10
+    encapsulation dot1Q 10
+    ip address 192.168.41.193 255.255.255.224
+
+    REM VLAN 20 = CONTABILIDAD
+    int f1/0.20
+    encapsulation dot1Q 20
+    ip address 192.168.41.225 255.255.255.240
+
+    REM VLAN 30 = VENTAS
+    int f1/0.30
+    encapsulation dot1Q 30
+    ip address 192.168.41.1 255.255.255.128
+
+    REM VLAN 40 = VENTAS
+    int f1/0.40
+    encapsulation dot1Q 40
+    ip address 192.168.41.129 255.255.255.192
+
+sh ip ro
+sh ip int br
+RUTEO RIP
+
 ```
-<p align="left">
-  <img src="/Proyecto2/imagenes/topologia3/intervlan.png" alt="drawing">
-</p>
+
+## PRUEBAS RUTEO ESTATICO
+
+<table>
+  <tr>
+    <th style="background-color:gray">R1</th>
+   
+  </tr>
+<tr style="background-color:yellow; color:black">
+    <td>
+    <li>ip route 192.168.41.0 255.255.255.128 10.1.0.1</li>
+    <li>ip route 192.168.41.128 255.255.255.192 10.1.0.1</li>
+    <li>ip route 192.168.41.192 255.255.255.224 10.1.0.1</li>
+    <li>ip route 192.168.41.224 255.255.255.240 10.1.0.1</li>
+    </td>  
+</tr>
+  <tr style="background-color:blue;" >
+    <td>
+    <li>ip route 192.168.51.0 255.255.255.192 10.1.64.2</li>
+    <li>ip route 192.168.51.64 255.255.255.192 10.1.64.2</li>
+    <li>ip route 192.168.51.128 255.255.255.192 10.1.64.2</li>
+    <li>ip route 192.168.51.192 255.255.255.192 10.1.64.2</li>
+</td>
+   
+  </tr>
+  <tr style="background-color:black">
+    <td><li>ip route 10.1.64.0 255.255.224.0 10.1.32.2 </li>
+    </td>
+   
+  </tr>
+</table>
+
+<br/>
+<br/>
+<table>
+  <tr>
+    <th style="background-color:gray">R2</th>
+   
+  </tr>
+<tr style="background-color:yellow; color:black">
+     <td>
+    <li>ip route 192.168.41.0 255.255.255.128 10.1.96.1   </li>
+    <li>ip route 192.168.41.128 255.255.255.192 10.1.96.1 </li>
+    <li>ip route 192.168.41.192 255.255.255.224 10.1.96.1 </li>
+    <li>ip route 192.168.41.224 255.255.255.240 10.1.96.1</li>
+    </td>
+</tr>
+  <tr style="background-color:blue;" >
+    <td>
+    <li>ip route 192.168.51.0 255.255.255.192 10.1.160.2</li>
+    <li>ip route 192.168.51.64 255.255.255.192 10.1.160.2</li>
+    <li>ip route 192.168.51.128 255.255.255.192 10.1.160.2</li>
+    <li>ip route 192.168.51.192 255.255.255.192 10.1.160.2</li>
+</li>
+    </td>
+   
+  </tr>
+  <tr style="background-color:black">
+    <td><li>ip route 10.1.160.0 255.255.224.0 10.1.128.2  </li>
+    </td>
+   
+  </tr>
+</table>
+<br/>
+<br/>
+
+<table>
+  <tr>
+    <th style="background-color:gray">R3</th>
+   
+  </tr>
+<tr style="background-color:yellow; color:black">
+    <td>
+    <li>ip route 192.168.41.0 255.255.255.128 10.1.96.1</li>
+    <li>ip route 192.168.41.128 255.255.255.192 10.1.96.1</li>
+    <li>ip route 192.168.41.192 255.255.255.224 10.1.96.1</li>
+    <li>ip route 192.168.41.224 255.255.255.240 10.1.96.1</li>
+
+</tr>
+  <tr style="background-color:blue;" >
+    <td>
+    <li>ip route 192.168.51.0 255.255.255.192 10.1.160.2</li>
+    <li>ip route 192.168.51.64 255.255.255.192 10.1.160.2</li>
+    <li>ip route 192.168.51.128 255.255.255.192 10.1.160.2</li>
+    <li>ip route 192.168.51.192 255.255.255.192 10.1.160.2</li>
+</td>
+   
+  </tr>
+  <tr style="background-color:black">
+    <td><li>ip route 10.1.96.0 255.255.224.0 10.1.128.1 </li>
+    </td>
+   
+  </tr>
+</table>
+
+<br/>
+<br/>
 
 
+<table>
+  <tr>
+    <th style="background-color:gray">R4</th>
+   
+  </tr>
+<tr style="background-color:yellow; color:black">
+    <td>
+    <li>ip route 192.168.41.0 255.255.255.128 10.1.0.1</li>
+    <li>ip route 192.168.41.128 255.255.255.192 10.1.0.1</li>
+    <li>ip route 192.168.41.192 255.255.255.224 10.1.0.1</li>
+    <li>ip route 192.168.41.224 255.255.255.240 10.1.0.1</li>
+    </td>  
+</tr>
+  <tr style="background-color:blue;" >
+    <td>
+    <li>ip route 192.168.51.0 255.255.255.192 10.1.64.2</li>
+    <li>ip route 192.168.51.64 255.255.255.192 10.1.64.2</li>
+    <li>ip route 192.168.51.128 255.255.255.192 10.1.64.2</li>
+    <li>ip route 192.168.51.192 255.255.255.192 10.1.64.2</li>
+</td>
+   
+  </tr>
+  <tr style="background-color:black">
+    <td>
+    <li>ip route 10.1.64.0 255.255.224.0 10.1.32.1 </li>
+    </td>
+  </tr>
+</table>
 
-```sh
-RUTAS
-```
-<p align="left">
-  <img src="/Proyecto2/imagenes/topologia3/rutas.png" alt="drawing">
-</p>
+<br/>
+
+<br/>
+
+<table>
+  <tr>
+    <th style="background-color:gray">R5</th>
+   
+  </tr>
+<tr style="background-color:blue;">
+    <td>
+    <li>ip route 192.168.51.0 255.255.255.192 10.1.0.2</li>
+    <li>ip route 192.168.51.64 255.255.255.192 10.1.0.2</li>
+    <li>ip route 192.168.51.128 255.255.255.192 10.1.0.2</li>
+    <li>ip route 192.168.51.192 255.255.255.192 10.1.0.2</li>
+    <li>ip route 192.168.51.0 255.255.255.192 10.1.96.2</li>
+    <li>ip route 192.168.51.64 255.255.255.192 10.1.96.2</li>
+    <li>ip route 192.168.51.128 255.255.255.192 10.1.96.2</li>
+    <li>ip route 192.168.51.192 255.255.255.192 10.1.96.2</li>
+    </td>
 
 
-```sh
-VPC1
-```
-<p align="left">
-  <img src="/Proyecto2/imagenes/topologia3/vpc1.png" alt="drawing">
-</p>
+  </tr>
+  <tr style="background-color:black">
+    <td>
+    <li>ip route 10.1.32.0 255.255.224.0 10.1.0.2 </li>
+    <li>ip route 10.1.64.0 255.255.224.0 10.1.0.2 </li>
+    <li>ip route 10.1.128.0 255.255.224.0 10.1.96.2 </li>
+    <li>ip route 10.1.160.0 255.255.224.0 10.1.96.2 </li>
+ </li>
+    </td>
+   
+  </tr>
+</table>
 
-```sh
-VPC2
-```
-<p align="left">
-  <img src="/Proyecto2/imagenes/topologia3/vpc2.png" alt="drawing">
-</p>
+<br/>
+<br/>
 
-```sh
-VPC3
-```
-<p align="left">
-  <img src="/Proyecto2/imagenes/topologia3/vpc3.png" alt="drawing">
-</p>
-
-```sh
-VPC4
-```
-<p align="left">
-  <img src="/Proyecto2/imagenes/topologia3/vpc4.png" alt="drawing">
-</p>
+<table>
+  <tr>
+    <th style="background-color:gray">R6</th>
+   
+  </tr>
+<tr style="background-color:yellow; color:black">
+    <td>
+    <li>ip route 192.168.41.0 255.255.255.128 10.1.64.1</li>
+    <li>ip route 192.168.41.128 255.255.255.192 10.1.64.1</li>
+    <li>ip route 192.168.41.192 255.255.255.224 10.1.64.1</li>
+    <li>ip route 192.168.41.224 255.255.255.240 10.1.64.1</li>
+    <li>ip route 192.168.41.0 255.255.255.128 10.1.160.1</li>
+    <li>ip route 192.168.41.128 255.255.255.192 10.1.160.1</li>
+    <li>ip route 192.168.41.192 255.255.255.224 10.1.160.1</li>
+    <li>ip route 192.168.41.224 255.255.255.240 10.1.160.1</li>
+</li>
+    </td>  
+</tr>
+</tr>
+  <tr style="background-color:black">
+    <td>
+    <li>ip route 10.1.0.0 255.255.224.0 10.1.64.1 </li>
+<li>ip route 10.1.32.0 255.255.224.0 10.1.64.1 </li>
+<li>ip route 10.1.96.0 255.255.224.0 10.1.160.1 </li>
+<li>ip route 10.1.128.0 255.255.224.0 10.1.160.1 </li>
+</li>
+    </td>
+   
+  </tr>
+</table>
