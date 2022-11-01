@@ -1,0 +1,60 @@
+Oct 30 23:38:45.949 HYPERVISOR: Release 0.2.22-amd64/Linux (tag 2022052400)
+Oct 30 23:38:45.949 HYPERVISOR: Started on IP = localhost, TCP port = 43839.
+Oct 30 23:38:45.959 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 30 23:38:45.959 HYPERVISOR: exec_cmd: hypervisor working_dir /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1_TOPO2/project-files/dynamips 
+Oct 30 23:38:45.959 GENERAL: working_dir=/home/iova/GNS3/projects/[REDES1]PROYECTO2_G1_TOPO2/project-files/dynamips
+Oct 30 23:38:45.959 HYPERVISOR: exec_cmd: hypervisor working_dir /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1_TOPO2/project-files/dynamips/a72a40a6-50cb-4e80-a4ee-dc0090ac732b 
+Oct 30 23:38:45.959 GENERAL: working_dir=/home/iova/GNS3/projects/[REDES1]PROYECTO2_G1_TOPO2/project-files/dynamips/a72a40a6-50cb-4e80-a4ee-dc0090ac732b
+Oct 30 23:38:45.959 HYPERVISOR: exec_cmd: vm create ESW6 12 c3725 
+Oct 30 23:38:45.960 VM: VM ESW6 created.
+Oct 30 23:38:45.960 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW6 5066 
+Oct 30 23:38:45.960 HYPERVISOR: exec_cmd: c3725 get_mac_addr ESW6 
+Oct 30 23:38:45.960 HYPERVISOR: exec_cmd: vm set_disk0 ESW6 1 
+Oct 30 23:38:45.960 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:38:45.960 HYPERVISOR: exec_cmd: vm set_idle_pc ESW6 0x60bf8ba0 
+Oct 30 23:38:45.961 HYPERVISOR: exec_cmd: vm set_ios ESW6 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 23:38:45.961 HYPERVISOR: exec_cmd: c3725 set_mac_addr ESW6 c20c.634b.0000 
+Oct 30 23:38:45.961 HYPERVISOR: exec_cmd: vm set_nvram ESW6 256 
+Oct 30 23:38:45.961 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:38:45.961 HYPERVISOR: exec_cmd: vm slot_add_binding ESW6 1 0 NM-16ESW 
+Oct 30 23:38:47.746 HYPERVISOR: exec_cmd: nio create_udp udp-414852f2-e6c2-4c60-9f8e-68f1a0b0ab11 10040 127.0.0.1 10041 
+Oct 30 23:38:47.954 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW6 1 3 udp-414852f2-e6c2-4c60-9f8e-68f1a0b0ab11 
+Oct 30 23:38:47.955 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:38:48.009 HYPERVISOR: exec_cmd: nio create_udp udp-b2affbd0-4b77-4b87-8969-80c093d16d30 10046 127.0.0.1 10047 
+Oct 30 23:38:48.009 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW6 1 4 udp-b2affbd0-4b77-4b87-8969-80c093d16d30 
+Oct 30 23:38:48.010 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:38:48.169 HYPERVISOR: exec_cmd: nio create_udp udp-fb81ecdb-581e-48da-ae15-9ea05cd1d857 10068 127.0.0.1 10069 
+Oct 30 23:38:48.170 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW6 1 1 udp-fb81ecdb-581e-48da-ae15-9ea05cd1d857 
+Oct 30 23:38:48.171 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:38:48.450 HYPERVISOR: exec_cmd: nio create_udp udp-764c4ebb-ab4f-47a1-90d3-4cfb539ac462 10074 127.0.0.1 10075 
+Oct 30 23:38:48.451 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW6 1 2 udp-764c4ebb-ab4f-47a1-90d3-4cfb539ac462 
+Oct 30 23:38:48.452 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:38:49.074 HYPERVISOR: exec_cmd: nio create_udp udp-f9d4cbaa-4b9f-4f64-be5e-02c6b7048265 10128 127.0.0.1 10129 
+Oct 30 23:38:49.075 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW6 1 5 udp-f9d4cbaa-4b9f-4f64-be5e-02c6b7048265 
+Oct 30 23:38:49.076 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:38:49.116 HYPERVISOR: exec_cmd: nio create_udp udp-6fdb2ff0-19c6-4c5e-9609-ea5c8c9a2ed6 10132 127.0.0.1 10133 
+Oct 30 23:38:49.117 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW6 1 6 udp-6fdb2ff0-19c6-4c5e-9609-ea5c8c9a2ed6 
+Oct 30 23:38:49.117 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:38:56.391 HYPERVISOR: exec_cmd: vm set_ios ESW6 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 23:38:57.769 HYPERVISOR: exec_cmd: vm set_ios ESW6 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 23:38:58.980 HYPERVISOR: exec_cmd: vm set_ios ESW6 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 23:39:11.289 HYPERVISOR: exec_cmd: vm set_ghost_status ESW6 2 
+Oct 30 23:39:11.291 HYPERVISOR: exec_cmd: vm set_ghost_file ESW6 /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1_TOPO2/project-files/dynamips/c3725-adventerprisek9-mz124-15.image-128.ghost 
+Oct 30 23:39:11.292 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:39:11.292 HYPERVISOR: exec_cmd: vm set_config ESW6 configs/i12_startup-config.cfg 
+Oct 30 23:39:11.292 HYPERVISOR: exec_cmd: vm start ESW6 
+Oct 30 23:39:41.514 HYPERVISOR: exec_cmd: vm extract_config ESW6 
+Oct 30 23:39:41.528 HYPERVISOR: exec_cmd: vm extract_config ESW6 
+Oct 30 23:46:22.603 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:46:22.603 HYPERVISOR: exec_cmd: vm stop ESW6 
+Oct 30 23:46:22.811 VM: VM ESW6 shutdown.
+Oct 30 23:46:22.812 HYPERVISOR: exec_cmd: vm extract_config ESW6 
+Oct 30 23:46:48.696 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:46:48.696 HYPERVISOR: exec_cmd: vm extract_config ESW6 
+Oct 30 23:46:49.246 HYPERVISOR: exec_cmd: vm get_status ESW6 
+Oct 30 23:46:49.247 HYPERVISOR: exec_cmd: vm extract_config ESW6 
+Oct 30 23:46:49.249 HYPERVISOR: exec_cmd: vm delete ESW6 
+Oct 30 23:46:49.249 VM: VM ESW6 destroyed.
+Oct 30 23:46:49.251 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 30 23:46:49.367 HYPERVISOR: Stopped.
+Oct 30 23:46:49.367 GENERAL: reset done.

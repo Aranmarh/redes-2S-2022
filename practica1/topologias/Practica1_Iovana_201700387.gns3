@@ -187,6 +187,11 @@
                             "type": "ethernet"
                         },
                         {
+                            "name": "tun0",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
                             "name": "virbr0",
                             "special": true,
                             "type": "ethernet"
@@ -267,6 +272,11 @@
                         {
                             "name": "lo",
                             "special": true,
+                            "type": "ethernet"
+                        },
+                        {
+                            "name": "tun0",
+                            "special": false,
                             "type": "ethernet"
                         },
                         {
@@ -353,6 +363,11 @@
                             "type": "ethernet"
                         },
                         {
+                            "name": "tun0",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
                             "name": "virbr0",
                             "special": true,
                             "type": "ethernet"
@@ -399,7 +414,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5015,
+                "console": 5031,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -479,7 +494,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5016,
+                "console": 5033,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -508,7 +523,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5018,
+                "console": 5036,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -537,7 +552,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5020,
+                "console": 5038,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -566,7 +581,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5022,
+                "console": 5041,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -597,6 +612,6 @@
     },
     "type": "topology",
     "variables": null,
-    "version": "2.2.33.1",
+    "version": "2.2.34",
     "zoom": 100
 }

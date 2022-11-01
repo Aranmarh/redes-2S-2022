@@ -1,0 +1,86 @@
+Oct 30 13:33:43.195 HYPERVISOR: Release 0.2.22-amd64/Linux (tag 2022052400)
+Oct 30 13:33:43.195 HYPERVISOR: Started on IP = localhost, TCP port = 57569.
+Oct 30 13:33:43.204 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 30 13:33:43.204 HYPERVISOR: exec_cmd: hypervisor working_dir /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1/project-files/dynamips 
+Oct 30 13:33:43.204 GENERAL: working_dir=/home/iova/GNS3/projects/[REDES1]PROYECTO2_G1/project-files/dynamips
+Oct 30 13:33:43.205 HYPERVISOR: exec_cmd: hypervisor working_dir /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1/project-files/dynamips/a9e61496-22f6-4f31-a612-a8352569f2c7 
+Oct 30 13:33:43.205 GENERAL: working_dir=/home/iova/GNS3/projects/[REDES1]PROYECTO2_G1/project-files/dynamips/a9e61496-22f6-4f31-a612-a8352569f2c7
+Oct 30 13:33:43.205 HYPERVISOR: exec_cmd: vm create R3 3 c3725 
+Oct 30 13:33:43.205 VM: VM R3 created.
+Oct 30 13:33:43.205 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5063 
+Oct 30 13:33:43.205 HYPERVISOR: exec_cmd: c3725 get_mac_addr R3 
+Oct 30 13:33:43.205 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Oct 30 13:33:43.206 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 13:33:43.206 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x60bf8ba0 
+Oct 30 13:33:43.206 HYPERVISOR: exec_cmd: vm set_ios R3 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 13:33:43.206 HYPERVISOR: exec_cmd: c3725 set_mac_addr R3 c203.65a8.0000 
+Oct 30 13:33:43.207 HYPERVISOR: exec_cmd: vm set_nvram R3 256 
+Oct 30 13:33:43.207 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 13:33:43.207 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 NM-1FE-TX 
+Oct 30 13:33:48.461 HYPERVISOR: exec_cmd: nio create_udp udp-c5a80033-0aeb-4594-8061-96686d5c4f03 10188 127.0.0.1 10189 
+Oct 30 13:33:48.670 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 1 0 udp-c5a80033-0aeb-4594-8061-96686d5c4f03 
+Oct 30 13:33:48.671 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 13:33:49.174 HYPERVISOR: exec_cmd: nio create_udp udp-9412a8fe-a435-4db1-84d1-7cb297dca4bc 10210 127.0.0.1 10211 
+Oct 30 13:33:49.174 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-9412a8fe-a435-4db1-84d1-7cb297dca4bc 
+Oct 30 13:33:49.175 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 13:35:01.190 HYPERVISOR: exec_cmd: vm set_ios R3 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 13:35:05.311 HYPERVISOR: exec_cmd: vm set_ios R3 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 13:35:06.253 HYPERVISOR: exec_cmd: vm set_ios R3 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 13:35:30.781 HYPERVISOR: exec_cmd: vm set_ios R3 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 13:35:34.855 HYPERVISOR: exec_cmd: vm set_ios R3 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 13:35:35.930 HYPERVISOR: exec_cmd: vm set_ios R3 /home/iova/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Oct 30 16:32:43.235 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Oct 30 16:32:43.240 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1/project-files/dynamips/c3725-adventerprisek9-mz124-15.image-128.ghost 
+Oct 30 16:32:43.240 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 16:32:43.241 HYPERVISOR: exec_cmd: vm set_config R3 configs/i3_startup-config.cfg 
+Oct 30 16:32:43.242 HYPERVISOR: exec_cmd: vm start R3 
+Oct 30 16:33:13.488 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 16:33:13.500 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 16:43:56.177 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 16:43:56.178 HYPERVISOR: exec_cmd: vm stop R3 
+Oct 30 16:43:56.284 VM: VM R3 shutdown.
+Oct 30 16:43:56.285 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 16:44:36.578 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Oct 30 16:44:36.579 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1/project-files/dynamips/c3725-adventerprisek9-mz124-15.image-128.ghost 
+Oct 30 16:44:36.580 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 16:44:36.580 HYPERVISOR: exec_cmd: vm set_config R3 configs/i3_startup-config.cfg 
+Oct 30 16:44:36.580 HYPERVISOR: exec_cmd: vm start R3 
+Oct 30 16:45:06.808 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 16:45:06.821 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 17:22:58.299 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 17:22:58.299 HYPERVISOR: exec_cmd: vm stop R3 
+Oct 30 17:22:58.395 VM: VM R3 shutdown.
+Oct 30 17:22:58.396 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 17:33:32.936 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Oct 30 17:33:32.938 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1/project-files/dynamips/c3725-adventerprisek9-mz124-15.image-128.ghost 
+Oct 30 17:33:32.938 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 17:33:32.939 HYPERVISOR: exec_cmd: vm set_config R3 configs/i3_startup-config.cfg 
+Oct 30 17:33:32.939 HYPERVISOR: exec_cmd: vm start R3 
+Oct 30 17:34:03.171 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 17:34:03.183 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 18:22:30.120 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 18:22:30.120 HYPERVISOR: exec_cmd: vm stop R3 
+Oct 30 18:22:30.229 VM: VM R3 shutdown.
+Oct 30 18:22:30.230 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 19:37:45.918 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Oct 30 19:37:45.918 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/iova/GNS3/projects/[REDES1]PROYECTO2_G1/project-files/dynamips/c3725-adventerprisek9-mz124-15.image-128.ghost 
+Oct 30 19:37:45.918 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 19:37:45.918 HYPERVISOR: exec_cmd: vm set_config R3 configs/i3_startup-config.cfg 
+Oct 30 19:37:45.919 HYPERVISOR: exec_cmd: vm start R3 
+Oct 30 19:38:16.159 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 19:38:16.179 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 19:55:46.312 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 19:55:46.329 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 20:03:08.534 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 20:03:08.534 HYPERVISOR: exec_cmd: vm stop R3 
+Oct 30 20:03:08.629 VM: VM R3 shutdown.
+Oct 30 20:03:08.629 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 20:07:31.312 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 20:07:31.313 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 20:07:31.432 HYPERVISOR: exec_cmd: vm get_status R3 
+Oct 30 20:07:31.433 HYPERVISOR: exec_cmd: vm extract_config R3 
+Oct 30 20:07:31.434 HYPERVISOR: exec_cmd: vm delete R3 
+Oct 30 20:07:31.435 VM: VM R3 destroyed.
+Oct 30 20:07:31.436 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 30 20:07:31.473 HYPERVISOR: Stopped.
+Oct 30 20:07:31.473 GENERAL: reset done.
